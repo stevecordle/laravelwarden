@@ -68,6 +68,3 @@ else
   warden env build
 fi
 warden env up -d
-
-## wait for postgres to start listening for connections
-warden shell -c "while ! nc -z db 5432 </dev/null; do sleep 2; done"
